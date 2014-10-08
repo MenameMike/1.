@@ -1,3 +1,6 @@
+//Created by Michael Newman
+//createRandomWeapon contructor is used to make a weapon with a random prefix, item type, and suffix. It also assigns it a stat modifier based on the suffix.
+
 var wepType = {
 getRand : function(){
 	var  i = (Math.round(Math.random() * 10));
@@ -39,12 +42,12 @@ var suffix = {
 
 createRandomWeapon = function(){
 this.type = wepType.getRand();
-this.modifyer = suffix.getRand();
+this.modifier = suffix.getRand();
 this.intMod = 0;
 this.strMod = 0;
 this.aglMod = 0;
-this.name =  prefix.getRand()  +" "+ this.type + " of " + this.modifyer;
-switch(this.modifyer){
+this.name =  prefix.getRand()  +" "+ this.type + " of " + this.modifier;
+switch(this.modifier){
 	case "hexing":
 		this.effect = this.intMod += 10;
 		break;
